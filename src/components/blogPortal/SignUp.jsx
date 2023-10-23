@@ -36,7 +36,7 @@ const SignUp = () => {
                 <button type="submit">Sign up </button>
                 <div className=""> {/*name the class */}
 					<div>
-						<span>Forgot password?</span>
+                        <span><Link to="/forgot-password">Forgot password?</Link></span>
 					</div>
 					<div>
 						<span><Link to="/login">Already have an account?!</Link></span>

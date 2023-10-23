@@ -33,10 +33,10 @@ const Navbar = ({isAuthenticated, setIsAuthenticated}) => {
                         ) : (
                             // If the user is not signed in, display login and sign up button
                             <>
-                                <li>
+                                <li className='login-button'>
                                     <Link to="/login">Login</Link>
                                 </li>
-                                <li>
+                                <li className='signup-button'>
                                     <Link to="/signup">Sign up</Link>
                                 </li>
                             </>

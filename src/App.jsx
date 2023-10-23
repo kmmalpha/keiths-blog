@@ -7,11 +7,12 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
-import Login from './components/signUpAndLogin/Login';
-import SignUp from './components/signUpAndLogin/SignUp';
+import Login from './components/blogPortal/Login';
+import SignUp from './components/blogPortal/SignUp';
+import ForgotPassword from './components/blogPortal/ForgotPassword';
 
 const App = () => {
-	const [isAuthenticated, setIsAuthenticated] = useState(false);
+	const [isAuthenticated, setIsAuthenticated] = useState(true);
 
 	return (
 		<div>
@@ -33,6 +34,8 @@ const App = () => {
 
 					<Route path='/login' Component={Login} />
 					<Route path='/signup' Component={SignUp} />
+
+					<Route path='/forgot-password' Component={ForgotPassword} />
 				</Routes>
 			{/* </Router> */}
 

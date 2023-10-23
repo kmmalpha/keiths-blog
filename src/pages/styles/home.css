@@ -1,7 +1,15 @@
-.HomePage {
+html {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    height: 100%;
+    background-color: #333;
+  }
+  .word {
+    margin: auto;
     color: white;
-    background:#333;
-    margin:0;
-    width:100%;
-    overflow:hidden;
-}
+    font: 700 normal 2.5em 'tahoma';
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+  }
+  
