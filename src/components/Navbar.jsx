@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/navbar.css';
 
-const Navbar = () => {
+const Navbar = ({isAuthenticated, setIsAuthenticated}) => {
+    const handleLogout = () => {
+        // log the use out
+        setIsAuthenticated(false);
+    }
+
     return (
         <nav className='navbar'>
             <div className='container'>
@@ -20,6 +25,22 @@ const Navbar = () => {
                         <li>
                             <Link to='/contact'>Contact</Link>
                         </li>
+                        {isAuthenticated ? (
+                            // If the user is signed in, display logout button
+                            <li onClick={handleLogout}>
+                                Logout
+                            </li>
+                        ) : (
+                            // If the user is not signed in, display login and sign up button
+                            <>
+                                <li className='login-button'>
+                                    <Link to="/login">Login</Link>
+                                </li>
+                                <li className='signup-button'>
+                                    <Link to="/signup">Sign up</Link>
+                                </li>
+                            </>
+                        )}
                     </ul>
                 </div>
             </div>

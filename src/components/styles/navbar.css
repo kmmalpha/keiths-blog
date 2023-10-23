@@ -1,35 +1,40 @@
 .navbar {
-    /* max-width: 1200px; */
-    height: 60px;
-    background-color: #333;
-    color: white;
+	/* max-width: 1200px; */
+	height: 60px;
+	background-color: #333;
+	color: white;
 }
 
 .navbar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .navbar li {
-    margin: 0 10px;
-    justify-content: center;
-    margin-top: 20px;
+	margin: 0 10px;
+	justify-content: center;
+	margin-top: 20px;
+	cursor: pointer;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
-    font-weight: 600;
+	text-decoration: underline;
+	font-weight: 600;
+	cursor: pointer;
 }
 
 .navbar a:active {
-    text-decoration: underline;
-    font-weight: 500;
-    color: grey;
+	text-decoration: underline;
+	font-weight: 500;
+	color: grey;
+	cursor: pointer;
 }
