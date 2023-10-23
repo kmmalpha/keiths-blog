@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+// eslint-disable-next-line
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -6,21 +7,34 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
-
+import Login from './components/signUpAndLogin/Login';
+import SignUp from './components/signUpAndLogin/SignUp';
 
 const App = () => {
+	const [isAuthenticated, setIsAuthenticated] = useState(false);
+
 	return (
 		<div>
-			<Router>
-				<Navbar />
+			{/* <Login />
+			<SignUp /> */}
+			{/* <Router> */}
+				{isAuthenticated ? (<Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />) : (<Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />)} {/* Pass isAuthenticated state to the Navbar component */}
 				<Routes>
-					<Route path='/' element={<Home />} />
+					{/* <Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/blog' element={<Blog />} />
 					<Route path='/contact' element={<Contact />} />
+					<Route path='*' element={<Navigate to='/' />} /> */}
+					<Route path='/' exact Component={Home} />
+					<Route path='/about' Component={About} />
+					<Route path='/blog' Component={Blog} />
+					<Route path='/contact' Component={Contact} />
 					<Route path='*' element={<Navigate to='/' />} />
+
+					<Route path='/login' Component={Login} />
+					<Route path='/signup' Component={SignUp} />
 				</Routes>
-			</Router>
+			{/* </Router> */}
 
 			<Footer />
 		</div>

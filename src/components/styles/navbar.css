@@ -16,20 +16,24 @@
     margin: 0 10px;
     justify-content: center;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .navbar a:hover {
     text-decoration: underline;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .navbar a:active {
     text-decoration: underline;
     font-weight: 500;
     color: grey;
+    cursor: pointer;
 }
