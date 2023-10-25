@@ -5,6 +5,10 @@
     margin: 25px auto;
     max-width: 450px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* input styles */
@@ -18,16 +22,21 @@
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid;
-    border-radius: 3px;
+    border-radius: 42px;
 }
 
 .form-container button {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 1px 20px;
-    border-radius: 3px;
+    padding: 10px;
+    border-radius: 42px;
     cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    transition: all 0.5s;
+    font-size: 18px;
 }
 
 .form-container button:hover {
@@ -35,6 +44,30 @@
     align-content: center;
 }
 
+.form-container button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.form-container button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.form-container button:hover span {
+	padding-right: 25px;
+}
+
+.form-container button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
 /* Header */
 .form-heading {
     text-align: center;

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import './styles/forgotPassword.css'
+// import './styles/forgotPassword.css'
+import './styles/authStyles.css'
+
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
@@ -18,8 +20,8 @@ const ForgotPassword = () => {
     }
 
     return (
-        <div className="forgot-password-container">
-            <h2 className="header">Forgot Password</h2>
+        <div className="form-container">
+            <h2 className="form-heading">Forgot Password</h2>
             {isEmailSent ? (
                 <span>An email with instructions has been sent to your email address.</span>
             ) : (

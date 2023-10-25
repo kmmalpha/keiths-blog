@@ -7,9 +7,9 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
-import Login from './components/blogPortal/Login';
-import SignUp from './components/blogPortal/SignUp';
-import ForgotPassword from './components/blogPortal/ForgotPassword';
+import Login from './components/features/auth/Login';
+import SignUp from './components/features/auth/SignUp';
+import ForgotPassword from './components/features/auth/ForgotPassword';
 
 const App = () => {
 	const [isAuthenticated, setIsAuthenticated] = useState(true);

@@ -14,7 +14,13 @@ const Login = () => {
 		// clear form fields after login
 		setEmail('');
 		setPassword('')
+		console.log('Form submitted')
 	}
+
+	// const handleButtonClick = (e) => {
+	// 	e.preventDefault()
+	// 	console.log('Form submitted')
+	// }
 
 	return (
 		<div className="form-container">
@@ -26,7 +32,7 @@ const Login = () => {
 				<input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 				{/* <label htmlFor="remember-me">Remember me</label> */}
 				{/* <input type="checkbox" /> */}
-				<button type="submit">Login</button>
+				<button type="submit"><span>Login</span></button>
 				<div className=""> {/*name the class */}
 					<div>
 						<span><Link to="/forgot-password">Forgot password?</Link></span>

@@ -1,0 +1,33 @@
+.post-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.post {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.post-username {
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	margin: 0;
+}
+
+.post-timestamp {
+	font-size: 14px;
+	color: #777;
+	margin-top: 5px;
+}
+
+.post-message {
+	font-size: 16px;
+	color: #333;
+	line-height: 1.5;
+	margin-top: 10px;
+}

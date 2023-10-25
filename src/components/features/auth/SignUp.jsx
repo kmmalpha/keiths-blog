@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './styles/authStyles.css'
 import { Link } from "react-router-dom";
+// import Button from "../reuseable-components/Button";
 
 const SignUp = () => {
     const [username, setUsername] = useState('')
@@ -19,6 +20,10 @@ const SignUp = () => {
         setPassword('');
         setConfirmPassword('');
     }
+
+    // const handleButtonClick = () => {
+	// 	console.log('Button clicked')
+	// }
     
     return (
         <div className="form-container">
@@ -33,7 +38,9 @@ const SignUp = () => {
                 <label htmlFor="confirmPassword">Confirm Password:</label>
 				<input type="password" className="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
 				
-                <button type="submit">Sign up </button>
+                <button type="submit"><span>Sign up</span></button>
+                {/* <Button text="Sign Up" onClick={handleButtonClick} /> */}
+
                 <div className=""> {/*name the class */}
 					<div>
                         <span><Link to="/forgot-password">Forgot password?</Link></span>

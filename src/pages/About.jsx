@@ -1,10 +1,12 @@
 import React from 'react';
+// import Button from '../components/reuseable-components/Button';
 // import './styles/about.css';
 
 const About = () => {
     return (
         <div>
             <p>This is the About page</p>
+            {/* <Button onClick={handleSubmit}>Submit</Button> */}
         </div>
     )
 }
