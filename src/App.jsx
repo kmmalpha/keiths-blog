@@ -13,11 +13,9 @@ import ForgotPassword from './components/features/auth/ForgotPassword';
 
 const App = () => {
 	const [isAuthenticated, setIsAuthenticated] = useState(true);
-
+	
 	return (
 		<div>
-			{/* <Login />
-			<SignUp /> */}
 			{/* <Router> */}
 				{isAuthenticated ? (<Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />) : (<Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />)} {/* Pass isAuthenticated state to the Navbar component */}
 				<Routes>
