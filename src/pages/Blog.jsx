@@ -1,31 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/blog.css';
 // import Post from '../components/Post';
-import CreatePost from '../components/features/auth/posts/CreatePost';
 
 const Blog = () => {
-	// eslint-disable-next-line
 	const [posts, setPosts] = useState([])
 
-	const handlePostSubmit = (content) => {
-		// Create a new post object and add it to the posts array
-		const newPost = {
-			id: new Date().getTime(), // Consider using a more unique ID generator
-			content,
-			timestamp: new Date().toLocaleDateString(),
-		}
-		setPosts([...posts, newPost])
-	}
-
+	useEffect(() => {
+		// Fetch the blog posts from the JSON file (or your backend) when the component mounts
+		fetch('http://127.0.0.1:5000/api/posts') // Adjust the API endpoint
+			.then((response) => response.json())
+			.then((data) => setPosts(data))
+			.catch((error) => console.error(error))
+	}, [])
+	
 	return (
-		<div className='blog-container'>
-			<h1>Blog Posts</h1>
-
-			<CreatePost onPostSubmit={handlePostSubmit} />
+		<div>
+			<h2>Blog Posts</h2>
 
 			{/* Display existing posts */}
-			{posts.map((post) => (
-				<div key={post.id}>
+			{posts.map((post, index) => (
+				<div key={index}>
 					<span>{post.timestamp}</span>
 					<span>{post.content}</span>
 				</div>

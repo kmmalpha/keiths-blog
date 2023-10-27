@@ -1,40 +1,40 @@
 import React, { useState } from "react";
 
-const CreatePost = ({ onPostSubmit }) => {
-    const [postContent, setPostContent] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+const CreatePost = () => {
+    const [postContent, setPostContent] = useState('')
 
-    const handlePostSubmit = (e) => {
-        e.preventDefault();
-
+    const handlePostSubmit = async () => {
         if (postContent.trim() === '') {
-            setErrorMessage('Please enter a post before submitting')
             return;
         }
+
+        const newPost = {
+            content: postContent,
+            timestamp: new Date().toLocaleDateString(),
+        }
+
+        // Send the new post data to your backend for saving to the JSON file
+        // You can use fetch or a similar method to send the data to your server
+
+        // After successfully saving, clear the input field
+        setPostContent('') 
     }
-
-    // Call the callback function to submit the post
-    onPostSubmit(postContent)
-
-    // Clear the input field
-    setPostContent('')
-    setErrorMessage('')
 
     return (
         <div className="create-post-container">
-            <h2 className="create-post-title">Create a Post</h2>
-            <form onSubmit={handlePostSubmit} className="create-post-form">
-                <textarea
-                    value={postContent}
-                    onChange={(e) => setPostContent(e.target.value)}
-                    placeholder="Write your post here..."
-                    className="create-post-textarea"
-                />
-                <button type="submit" className="create-post-button">Post</button>
-            </form>
-            {errorMessage && <span className="error-message">{errorMessage}</span>}
+            <h2>
+                Create a Post
+            </h2>
+            <textarea
+                value={postContent}
+                onChange={(e) => setPostContent(e.target.value)}
+                placeholder="Write your post here..."
+            />
+            <button onClick={handlePostSubmit}>Post</button>
         </div>
     )
 }
 
 export default CreatePost;
+
+

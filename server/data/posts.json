@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "username": "kmmalpha",
+        "content": "Its not really much right now but its something",
+        "timestamp": "Tue, 24 Oct, 12:48"
+    },
+    {
+        "id": 2,
+        "username": "Alpha",
+        "content": "Yeah, gotta start somewhere, right?",
+        "timestamp": "Tue, 24 Oct, 12:48"
+    },
+    {
+        "id": 3,
+        "username": "Serenity",
+        "content": "You gotta!",
+        "timestamp": "Tue, 24 Oct, 12:49"
+    },
+    {
+        "id": 4,
+        "username": "Lao Tzu",
+        "content": "The journey of a thousand miles begins with a single step.",
+        "timestamp": "Tue, 24 Oct, 12:57"
+    },
+    {
+        "id": 5,
+        "username": "Norman Vincent Peale",
+        "content": "Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.",
+        "timestamp": "Tue, 24 Oct, 13:00"
+    },
+    {
+        "id": 6,
+        "username": "John D. Rockefeller.",
+        "content": "Dont be afraid to give up the good to go for the great.",
+        "timestamp": "Tue, 24 Oct, 13:09"
+    },
+    {
+        "id": 7,
+        "username": "Steve Jobs",
+        "content": "The only way to do great work is to love what you do.",
+        "timestamp": "Tue, 24 Oct, 13:10"
+    },
+    {
+        "id": 8,
+        "username": "Jimmy Johnson",
+        "content": "The difference between ordinary and extraordinary is that little extra.",
+        "timestamp": "Tue, 24 Oct, 13:25"
+    },
+    {
+        "id": 9,
+        "username": "Confucius",
+        "content": "It does not matter how slowly you go as long as you do not stop.",
+        "timestamp": "Tue, 24 Oct, 13:49"
+    }
+]
