@@ -31,3 +31,35 @@
 	line-height: 1.5;
 	margin-top: 10px;
 }
+
+
+/* Blog.css */
+
+.blog-container {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-title {
+	font-size: 24px;
+	color: #333;
+	margin: 0;
+  }
+  
+  .blog-post {
+	margin-top: 20px;
+  }
+  
+  .blog-post-timestamp {
+	font-size: 16px;
+	color: #555;
+  }
+  
+  .blog-post-content {
+	font-size: 16px;
+	color: #333;
+  }
+  
