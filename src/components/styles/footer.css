@@ -35,13 +35,17 @@ body {
 }
 
 footer {
-	border-top-right-radius: 15px;
-	border-top-left-radius: 15px;
+	/* border-top-right-radius: 15px; */
+	/* border-top-left-radius: 15px; */
 	background-color: #333;
 	color: white;
 	padding: 10px 0;
 	text-align: center;
 	flex-shrink: 0; /* Prevent the footer from shrinking */ 
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 .container {
